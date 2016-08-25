@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/LibMaterialView.iml" filepath="$PROJECT_DIR$/LibMaterialView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MaterialSpinner/MaterialSpinner.iml" filepath="$PROJECT_DIR$/MaterialSpinner/MaterialSpinner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample/app.iml" filepath="$PROJECT_DIR$/sample/app.iml" />
+    </modules>
+  </component>
+</project>
