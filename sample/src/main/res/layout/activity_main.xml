@@ -21,7 +21,7 @@
             android:layout_height="wrap_content">
 
             <android.support.design.widget.TextInputEditText
-                android:layout_width="200dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/app_name">
 
@@ -32,7 +32,25 @@
             android:id="@+id/Spinner_Default"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            app:s_hint="@string/hint"
+            app:s_hintColor="#777777"
+            app:s_floatingLabelText="@string/app_name"
+            app:s_thickness="2dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/AutoCompleteTextView_ReservationTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/app_name"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
 
         <com.github.sdw8001.materialspinner.MaterialSpinner
             android:id="@+id/Spinner_Floating"

@@ -20,5 +20,7 @@
         <attr name="s_enableFloatingLabel" format="boolean"/>
         <attr name="s_enableErrorLabel" format="boolean"/>
         <attr name="s_isRtl" format="boolean"/>
+        <attr name="s_underLineTopSpacing" format="integer"/>
+        <attr name="s_underLineBottomSpacing" format="integer"/>
     </declare-styleable>
 </resources>

@@ -433,11 +433,12 @@ public class MaterialSpinner extends AppCompatSpinner implements ValueAnimator.A
             }
 
         } else {
-            lineHeight = dpToPx(thickness);
             if (isSelected || hasFocus()) {
                 paint.setColor(highlightColor);
+                lineHeight = dpToPx(thickness + 1);
             } else {
                 paint.setColor(isEnabled() ? baseColor : disabledColor);
+                lineHeight = dpToPx(thickness);
             }
         }
 

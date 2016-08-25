@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LibMaterialView.iml" filepath="$PROJECT_DIR$/LibMaterialView.iml" />
       <module fileurl="file://$PROJECT_DIR$/MaterialSpinner/MaterialSpinner.iml" filepath="$PROJECT_DIR$/MaterialSpinner/MaterialSpinner.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sample/app.iml" filepath="$PROJECT_DIR$/sample/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample/sample.iml" filepath="$PROJECT_DIR$/sample/sample.iml" />
     </modules>
   </component>
 </project>
