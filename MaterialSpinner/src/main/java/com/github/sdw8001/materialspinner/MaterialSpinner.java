@@ -103,6 +103,7 @@ public class MaterialSpinner extends AppCompatSpinner implements ValueAnimator.A
     private float arrowSize;
     private boolean enableErrorLabel;
     private boolean enableFloatingLabel;
+    private boolean enableUnderLine;
     private boolean isRtl;
 
     private HintAdapter hintAdapter;
@@ -180,6 +181,7 @@ public class MaterialSpinner extends AppCompatSpinner implements ValueAnimator.A
         arrowColor = array.getColor(R.styleable.MaterialSpinner_s_arrowColor, baseColor);
         arrowSize = array.getDimension(R.styleable.MaterialSpinner_s_arrowSize, dpToPx(DEFAULT_ARROW_WIDTH_DP));
         enableErrorLabel = array.getBoolean(R.styleable.MaterialSpinner_s_enableErrorLabel, true);
+        enableUnderLine = array.getBoolean(R.styleable.MaterialSpinner_s_enableUnderLine, true);
         enableFloatingLabel = array.getBoolean(R.styleable.MaterialSpinner_s_enableFloatingLabel, true);
         isRtl = array.getBoolean(R.styleable.MaterialSpinner_s_isRtl, false);
 
@@ -254,12 +256,12 @@ public class MaterialSpinner extends AppCompatSpinner implements ValueAnimator.A
 
         extraPaddingTop = enableFloatingLabel ? floatingLabelTopSpacing + floatingLabelInsideSpacing + floatingLabelBottomSpacing : floatingLabelBottomSpacing;
         updateBottomPadding();
-
     }
 
     private void updateBottomPadding() {
         Paint.FontMetrics textMetrics = textPaint.getFontMetrics();
         extraPaddingBottom = underlineTopSpacing + underlineBottomSpacing;
+
         if (enableErrorLabel) {
             extraPaddingBottom += (int) ((textMetrics.descent - textMetrics.ascent) * currentErrorLines);
         }
@@ -443,7 +445,8 @@ public class MaterialSpinner extends AppCompatSpinner implements ValueAnimator.A
         }
 
         // Underline Drawing
-        canvas.drawRect(startX, startYLine, endX, startYLine + lineHeight, paint);
+        if (enableUnderLine)
+            canvas.drawRect(startX, startYLine, endX, startYLine + lineHeight, paint);
 
         //Floating Label Drawing
         if ((hint != null || floatingLabelText != null) && enableFloatingLabel) {

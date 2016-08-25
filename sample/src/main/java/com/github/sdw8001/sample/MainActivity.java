@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayAdapter<String> adapter;
 
+    private MaterialSpinner spinner_NoUnderline;
     private MaterialSpinner spinner1;
     private MaterialSpinner spinner2;
     private MaterialSpinner spinner3;
-    private MaterialSpinner spinner4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,21 +34,21 @@ public class MainActivity extends AppCompatActivity {
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, ITEMS);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        initSpinnerDefault();
+        initSpinnerNoUnderline();
         initSpinnerFloating();
         initSpinnerErrorSingleLine();
         initSpinnerErrorMultiLine();
     }
 
-    private void initSpinnerDefault() {
-        spinner1 = (MaterialSpinner) findViewById(R.id.Spinner_Default);
-        spinner1.setAdapter(adapter);
+    private void initSpinnerNoUnderline() {
+        spinner_NoUnderline = (MaterialSpinner) findViewById(R.id.Spinner_NoUnderline);
+        spinner_NoUnderline.setAdapter(adapter);
     }
 
     private void initSpinnerFloating() {
-        spinner2 = (MaterialSpinner) findViewById(R.id.Spinner_Floating);
-        spinner2.setAdapter(adapter);
-        spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinner1 = (MaterialSpinner) findViewById(R.id.Spinner_Floating);
+        spinner1.setAdapter(adapter);
+        spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(getBaseContext(), "onItemClick" + adapterView.getItemAtPosition(i).toString(), Toast.LENGTH_SHORT).show();
@@ -62,23 +62,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initSpinnerErrorSingleLine() {
-        spinner3 = (MaterialSpinner) findViewById(R.id.Spinner_ErrorSingleLine);
-        spinner3.setAdapter(adapter);
+        spinner2 = (MaterialSpinner) findViewById(R.id.Spinner_ErrorSingleLine);
+        spinner2.setAdapter(adapter);
     }
 
     private void initSpinnerErrorMultiLine() {
-        spinner4 = (MaterialSpinner) findViewById(R.id.Spinner_ErrorMultiLine);
-        spinner4.setAdapter(adapter);
+        spinner3 = (MaterialSpinner) findViewById(R.id.Spinner_ErrorMultiLine);
+        spinner3.setAdapter(adapter);
     }
 
     private boolean shown = false;
     public void activateError(View view) {
         if (!shown) {
+            spinner2.setError(ERROR_MSG);
             spinner3.setError(ERROR_MSG);
-            spinner4.setError(ERROR_MSG);
         } else {
+            spinner2.setError(null);
             spinner3.setError(null);
-            spinner4.setError(null);
         }
         shown = !shown;
 

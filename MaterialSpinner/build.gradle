@@ -14,8 +14,8 @@ publish {
     userOrg = 'sdw8001'
     groupId = 'com.github.sdw8001'
     artifactId = 'material-spinner'
-    publishVersion = '0.0.3'
-    desc = 'MaterialSpinner Library v.0.0.3'
+    publishVersion = '0.0.4'
+    desc = 'MaterialSpinner Library v.0.0.4'
     website = 'https://github.com/sdw8001/MaterialSpinner'
 }
 
