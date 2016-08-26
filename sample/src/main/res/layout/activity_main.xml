@@ -26,8 +26,6 @@
             app:s_enableUnderLine="false"
             app:s_enableErrorLabel="false"
             app:s_floatingLabelText="@string/app_name"
-            app:s_hint="@string/hint"
-            app:s_hintColor="#777777"
             app:s_thickness="2dp" />
     </LinearLayout>
 
@@ -78,6 +76,13 @@
             android:layout_weight="1"
             android:hint="Show/hide error"
             android:onClick="activateError" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Selection Change"
+            android:onClick="selectionChange" />
 
     </LinearLayout>
 </LinearLayout>

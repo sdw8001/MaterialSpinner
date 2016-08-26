@@ -83,4 +83,8 @@ public class MainActivity extends AppCompatActivity {
         shown = !shown;
 
     }
+    public void selectionChange(View view) {
+        spinner_NoUnderline.setSelection(2);
+        spinner1.setSelection(2);
+    }
 }
