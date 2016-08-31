@@ -47,29 +47,6 @@
             app:s_hintColor="#777777"
             app:s_thickness="2dp" />
 
-        <com.github.sdw8001.materialspinner.MaterialSpinner
-            android:id="@+id/Spinner_ErrorSingleLine"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:s_baseColor="@color/spinner_base_color"
-            app:s_floatingLabelText="@string/app_name"
-            app:s_hint="@string/hint"
-            app:s_hintColor="#777777"
-            app:s_multiline="false" />
-
-        <com.github.sdw8001.materialspinner.MaterialSpinner
-            android:id="@+id/Spinner_ErrorMultiLine"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:s_baseColor="@color/spinner_base_color"
-            app:s_floatingLabelText="@string/app_name"
-            app:s_hint="@string/hint"
-            app:s_hintColor="#777777"
-            app:s_multiline="true"
-            app:s_thickness_error="2dp" />
-
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"

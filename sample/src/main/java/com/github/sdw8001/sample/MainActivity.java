@@ -23,8 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
     private MaterialSpinner spinner_NoUnderline;
     private MaterialSpinner spinner1;
-    private MaterialSpinner spinner2;
-    private MaterialSpinner spinner3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
         initSpinnerNoUnderline();
         initSpinnerFloating();
-        initSpinnerErrorSingleLine();
-        initSpinnerErrorMultiLine();
     }
 
     private void initSpinnerNoUnderline() {
@@ -61,24 +57,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void initSpinnerErrorSingleLine() {
-        spinner2 = (MaterialSpinner) findViewById(R.id.Spinner_ErrorSingleLine);
-        spinner2.setAdapter(adapter);
-    }
-
-    private void initSpinnerErrorMultiLine() {
-        spinner3 = (MaterialSpinner) findViewById(R.id.Spinner_ErrorMultiLine);
-        spinner3.setAdapter(adapter);
-    }
-
     private boolean shown = false;
     public void activateError(View view) {
         if (!shown) {
-            spinner2.setError(ERROR_MSG);
-            spinner3.setError(ERROR_MSG);
+            spinner_NoUnderline.setError(ERROR_MSG);
+            spinner1.setError(ERROR_MSG);
         } else {
-            spinner2.setError(null);
-            spinner3.setError(null);
+            spinner_NoUnderline.setError(null);
+            spinner1.setError(null);
         }
         shown = !shown;
 
