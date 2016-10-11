@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.github.sdw8001.materialspinner.LabelledSpinner;
 import com.github.sdw8001.materialspinner.MaterialSpinner;
 
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private MaterialSpinner spinner_NoUnderline;
     private MaterialSpinner spinner1;
+    private LabelledSpinner labelledSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
         initSpinnerNoUnderline();
         initSpinnerFloating();
+        labelledSpinner = (LabelledSpinner) findViewById(R.id.LabelledSpinner);
+        labelledSpinner.setItemsArray(ITEMS);
     }
 
     private void initSpinnerNoUnderline() {

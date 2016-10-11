@@ -22,4 +22,42 @@
         <attr name="s_enableUnderLine" format="boolean"/>
         <attr name="s_isRtl" format="boolean"/>
     </declare-styleable>
+
+    <declare-styleable name="LabelledSpinner" >
+
+        <!-- The text that is displayed on the floating label -->
+        <attr name="labelText" format="string" />
+        <!-- Specifies the color of the label and the bottom line -->
+        <attr name="widgetColor" format="color" />
+
+        <!-- Sets the array to be displayed on the Spinner -->
+        <attr name="spinnerEntries" format="reference" />
+
+        <!-- Controls whether an error is shown if the first item (which
+        would be a prompt) is selected and has not been changed -->
+        <attr name="defaultErrorEnabled" format="boolean" />
+        <attr name="defaultLabelEnabled" format="boolean" />
+        <attr name="defaultDividerEnabled" format="boolean" />
+        <attr name="labelMarginLeft" format="integer" />
+        <attr name="labelMarginTop" format="integer" />
+        <attr name="labelMarginRight" format="integer" />
+        <attr name="labelMarginBottom" format="integer" />
+        <attr name="spinnerMarginLeft" format="integer" />
+        <attr name="spinnerMarginTop" format="integer" />
+        <attr name="spinnerMarginRight" format="integer" />
+        <attr name="spinnerMarginBottom" format="integer" />
+        <attr name="dividerMarginLeft" format="integer" />
+        <attr name="dividerMarginTop" format="integer" />
+        <attr name="dividerMarginRight" format="integer" />
+        <attr name="dividerMarginBottom" format="integer" />
+
+    </declare-styleable>
+
+    <declare-styleable name="FlippableView" >
+
+        <!-- The views for the front and back of the FlippableView -->
+        <attr name="viewFront" format="reference" />
+        <attr name="viewBack" format="reference" />
+
+    </declare-styleable>
 </resources>

@@ -2,4 +2,10 @@
 <resources>
     <color name="disabled_color">#44000000</color>
     <color name="error_color">#E7492E</color>
+
+    <!-- The default color of the widget (label and bottom line). -->
+    <color name="widget_labelled_spinner_default">#6D6D6D</color>
+
+    <!-- The color of the divider and error text when enabled. -->
+    <color name="widget_labelled_spinner_error">#FFDD2C00</color>
 </resources>

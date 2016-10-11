@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MaterialSpinner</string>
+    <string name="widget_labelled_spinner_errorText">You must choose an item.</string>
 </resources>

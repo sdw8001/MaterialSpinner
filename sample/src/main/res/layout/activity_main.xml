@@ -14,8 +14,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_bright"
         android:layout_margin="5dp"
+        android:background="@android:color/darker_gray"
         android:baselineAligned="false">
 
         <com.github.sdw8001.materialspinner.MaterialSpinner
@@ -46,6 +46,32 @@
             app:s_hint="@string/hint"
             app:s_hintColor="#777777"
             app:s_thickness="2dp" />
+
+        <com.github.sdw8001.materialspinner.LabelledSpinner
+            android:id="@+id/LabelledSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            app:labelMarginTop="5"
+            app:spinnerMarginTop="5"
+            app:dividerMarginTop="5"
+            app:labelText="TEST"
+            app:defaultDividerEnabled="true" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/AutoCompleteTextView_ReservationTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="TEST"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
 
         <Button
             android:layout_width="0dp"
